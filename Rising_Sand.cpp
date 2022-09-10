@@ -8,9 +8,22 @@ using namespace std;
 #define has(s,a) s.find(a)!=s.end()
 
 int main(void) {
-	int t, n;
+	int t, n, k, i;
 	cin>>t;
 	while(t--) {
-		cin>>n;
+		cin>>n>>k;
+		vi arr(n);
+		for(i=0;i<n;i++)
+			cin>>arr[i];
+		if(k==1)
+			cout<<n/2-((n&1)==0)<<endl;
+		else {
+			int ans=0;
+			for(i=1;i<n-1;i++) {
+				if(arr[i]>arr[i-1]+arr[i+1])
+					ans++;
+			}
+			cout<<ans<<endl;
+		}
 	}
 }

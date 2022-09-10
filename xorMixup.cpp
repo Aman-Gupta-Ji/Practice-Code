@@ -8,9 +8,14 @@ using namespace std;
 #define has(s,a) s.find(a)!=s.end()
 
 int main(void) {
-	int t, n;
+	int t, n, i, x;
 	cin>>t;
 	while(t--) {
 		cin>>n;
+		vector<int> arr(n);
+		x=0;
+		for(i=0;i<n;i++)
+			cin>>arr[i];
+		cout<<arr[0]<<endl;
 	}
 }
