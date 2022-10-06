@@ -18,7 +18,8 @@ int main(void) {
 			if(z[k] < r - i + 1)
 				z[i] = z[k];
 			else {
-				c = i + z[k];
+				l = i;
+				c = r - l;
 				while(s[c] == s[r] && r < n) {
 					c++;
 					r++;

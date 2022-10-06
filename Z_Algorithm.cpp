@@ -15,7 +15,8 @@ vector<int> z_array(string s, int n) {
 			if(z[k] < r - i + 1)
 				z[i] = z[k];
 			else {
-				c = i + z[k];
+				l = i;
+				c = r - l;
 				while(s[c] == s[r] && r < n) {
 					c++;
 					r++;
